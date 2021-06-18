@@ -1,0 +1,20 @@
+@import "./variables";
+
+@mixin flexCenter($direction){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: $direction;
+}
+
+header{
+    background: lightcoral;
+    @include flexCenter(column);
+    button{
+        background-color: $primaryBtn;
+        &:hover{
+            background-color: rgb(45, 131, 81);
+        }
+    }
+}
